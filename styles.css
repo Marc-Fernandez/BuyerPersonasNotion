@@ -1,0 +1,132 @@
+* {
+  padding: 0;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: lighter;
+}
+
+:root {
+  --background: #748f88;
+  --text-title: #eca400;
+  --card: #fffff2;
+  --card-darker: #ecead5c2;
+  --subtitles: #f15946;
+  --text-normal: #30343f;
+  --border: #0781be;
+}
+
+body {
+  background-color: var(--background);
+}
+
+h1 {
+  color: var(--text-title);
+}
+
+h2 {
+  color: var(--subtitles);
+}
+
+.card {
+  background-color: var(--card);
+  border-radius: 7px;
+  width: 70%;
+  margin: 65px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 33.3%);
+  transition: 700ms;
+  border: var(--card-darker) 1px solid;
+}
+
+.card:hover {
+  -webkit-box-shadow: 0px 0px 32px 4px rgba(0, 0, 0, 0.57);
+  box-shadow: 0px 0px 32px 4px rgba(0, 0, 0, 0.57);
+  transition: 700ms;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  /* bottom: 0; */
+  grid-row: span 100;
+  object-fit: cover;
+  border-radius: 7px 0 0 7px;
+}
+
+.about,
+.frustrations {
+  background-color: var(--card-darker);
+}
+
+.aspirations,
+.favbrands {
+  grid-column: span 2;
+}
+
+.aspirations {
+  border-bottom: var(--card-darker) 2px solid;
+  padding: 10px 0 30px 0;
+}
+
+.aspirations > p {
+  margin-top: 10px;
+}
+
+.favbrands {
+  border-top: var(--card-darker) 2px solid;
+  padding: 10px 0 10px 0;
+  display: inline;
+}
+.fab {
+  height: 70px;
+  margin: 20px 22px;
+}
+
+h1,
+h2,
+ul {
+  padding: 10px 22px 0 22px;
+  font-weight: bolder;
+}
+
+p,
+li {
+  padding: 0 35px;
+  color: var(--text-normal);
+  font-size: 21px;
+  font-weight: lighter;
+}
+
+li {
+  margin-bottom: 0.4em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+b {
+  font-weight: bolder;
+}
+
+.logos {
+  padding-left: 13px;
+}
+
+@media (max-width: 1334px) {
+  .card {
+    display: block;
+    background-color: var(--card);
+  }
+
+  .image {
+    object-fit: scale-down;
+    width: 100%;
+    max-height: 500px;
+    border-radius: 5px;
+  }
+  ul {
+    padding-bottom: 10px;
+  }
+}
